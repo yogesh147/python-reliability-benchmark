@@ -1,0 +1,58 @@
+[
+  {
+    "id": "GEN001",
+    "category": "code_generation",
+    "prompt": "Write a Python function named solve(nums) that returns the sum of all even integers in a list. Return 0 for an empty list.",
+    "function_name": "solve",
+    "tests": [
+      {"input": [[1, 2, 3, 4]], "expected": 6},
+      {"input": [[]], "expected": 0},
+      {"input": [[-2, -3, 0, 8]], "expected": 6}
+    ]
+  },
+  {
+    "id": "GEN002",
+    "category": "code_generation",
+    "prompt": "Write a Python function named solve(text) that returns the frequency of each word, ignoring case and punctuation. Return a dictionary.",
+    "function_name": "solve",
+    "tests": [
+      {"input": ["Hello, hello world!"], "expected": {"hello": 2, "world": 1}},
+      {"input": [""], "expected": {}},
+      {"input": ["Python python PYTHON"], "expected": {"python": 3}}
+    ]
+  },
+  {
+    "id": "DBG001",
+    "category": "debugging",
+    "prompt": "Fix this function. It should return the factorial of a non-negative integer. Return the corrected complete function named solve(n).\n\nOriginal buggy code:\ndef solve(n):\n    if n == 0:\n        return 0\n    return n * solve(n - 1)",
+    "function_name": "solve",
+    "tests": [
+      {"input": [0], "expected": 1},
+      {"input": [1], "expected": 1},
+      {"input": [5], "expected": 120}
+    ]
+  },
+  {
+    "id": "EDGE001",
+    "category": "edge_cases",
+    "prompt": "Write a Python function named solve(items) that returns the second-largest DISTINCT integer in a list. Return None if fewer than two distinct integers exist.",
+    "function_name": "solve",
+    "tests": [
+      {"input": [[5, 1, 5, 3]], "expected": 3},
+      {"input": [[7, 7, 7]], "expected": null},
+      {"input": [[]], "expected": null},
+      {"input": [[-5, -2, -9]], "expected": -5}
+    ]
+  },
+  {
+    "id": "INS001",
+    "category": "instruction_following",
+    "prompt": "Implement solve(nums). Return a list of the positive integers in ascending order. Do not modify the input list. Do not import any modules. Return an empty list if no positive integers exist.",
+    "function_name": "solve",
+    "tests": [
+      {"input": [[3, -1, 2, 0]], "expected": [2, 3]},
+      {"input": [[-3, 0]], "expected": []},
+      {"input": [[4, 4, 1]], "expected": [1, 4, 4]}
+    ]
+  }
+]
